@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.http import Http404
 from django.utils.html import escape
+import json
 
 def home(request):
     return HttpResponse("API HOME")
@@ -22,7 +23,7 @@ def setup_webhook(request):
         return HttpResponse("NOT FOUND", status=400)
     
 def parse_message(request):
-    data = request.body.entry[0].messaging[0].message.text
+    data = json.loads(request.body).entry[0].messaging[0].message.text
     print data
 
 
