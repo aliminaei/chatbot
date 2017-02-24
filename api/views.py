@@ -3,6 +3,7 @@ from django.conf import settings
 from django.http import Http404
 from django.utils.html import escape
 import json
+import requests
 
 def home(request):
     return HttpResponse("API HOME")
