@@ -21,4 +21,35 @@ def setup_webhook(request):
         return HttpResponse("NOT FOUND", status=400)
     
 def parse_message(request):
+    print request.POST
+    data = request.POST.get("data", "")
+
+
+        # {
+        #     "object":"page",
+        #     "entry":[
+        #         {
+        #             "messaging":[
+        #                 {
+        #                     "message":{
+        #                         "text":"does this work?",
+        #                         "seq":20,
+        #                         "mid":"mid.1466015596912:7348aba4de4cfddf91"
+        #                     },
+        #                     "timestamp":1466015596919,
+        #                     "sender":{
+        #                         "id":"885721401551027"
+        #                     },
+        #                     "recipient":{
+        #                         "id":"260317677677806"
+        #                     }
+        #                 }
+        #             ],
+        #             "time":1466015596947,
+        #             "id":"260317677677806"
+        #         }
+        #     ]
+        # }
+
+
     return HttpResponse("DONE!!!")
