@@ -1,7 +1,7 @@
 {
-  "name": "Awesome API",
-  "description": "Awesome API is an example REST API using Django REST framework.",
-  "repository": "https://github.com/aliminaei/awesome-api",
+  "name": "Wonga Chatbot",
+  "description": "Wonga's awesome chatbpot.",
+  "repository": "https://github.com/aliminaei/chatbot",
   "logo": "https://dl.dropboxusercontent.com/u/11427506/python.png",
-  "keywords": ["Django", "Django REST Framework", "REST"]
+  "keywords": ["Django"]
 }

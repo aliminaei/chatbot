@@ -1,1 +1,1 @@
-web: gunicorn awesome_api.wsgi --log-file -
+web: gunicorn chatbot.wsgi --log-file -
