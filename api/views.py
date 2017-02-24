@@ -22,8 +22,8 @@ def setup_webhook(request):
         return HttpResponse("NOT FOUND", status=400)
     
 def parse_message(request):
-    print request
-    print request.body
+    data = request.body.entry[0].messaging[0].message.text
+    print data
 
 
         # {
