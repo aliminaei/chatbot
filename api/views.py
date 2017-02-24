@@ -15,9 +15,9 @@ def setup_webhook(request):
     mode = request.GET.get('hub.mode', '')
     verify_token = request.GET.get('hub.verify_token', '')
     challenge = request.GET.get('hub.challenge', '')
-    if mode == 'subscribe' and verify_token == settings.FB_VERIFY_TOKEN
+    if mode == 'subscribe' and verify_token == settings.FB_VERIFY_TOKEN:
         return HttpResponse(challenge)
-    else
+    else:
         return HttpResponse(status=400)
     
 def parse_message(request):
