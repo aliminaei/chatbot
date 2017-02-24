@@ -131,3 +131,4 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+FB_VERIFY_TOKEN = 'QSB2ZXJ5IGF3ZXNvbWUgdG9rZW4gZm9yIGEgc3VwZXIgYXdlc29tZSB0ZWFtISE='
