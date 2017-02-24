@@ -18,9 +18,7 @@ def setup_webhook(request):
     if mode == 'subscribe' and verify_token == settings.FB_VERIFY_TOKEN:
         return HttpResponse(challenge)
     else:
-        return HttpResponse(status=400)
-
-    return HttpResponse("DONE!!!")
+        return HttpResponse("NOT FOUND", status=400)
     
 def parse_message(request):
     return HttpResponse("DONE!!!")
