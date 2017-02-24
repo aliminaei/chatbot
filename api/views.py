@@ -23,7 +23,7 @@ def setup_webhook(request):
         return HttpResponse("NOT FOUND", status=400)
     
 def parse_message(request):
-    data = json.loads(request.body).entry[0].messaging[0].message.text
+    data = json.loads(request.body)['entry'][0]['messaging'][0]["message"]["text"]
     print data
 
 
@@ -54,4 +54,4 @@ def parse_message(request):
         # }
 
 
-    return HttpResponse("body")
+    return HttpResponse(data)
