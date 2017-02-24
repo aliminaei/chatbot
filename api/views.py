@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.conf import settings
 from django.http import Http404
+from django.utils.html import escape
 
 def home(request):
     return HttpResponse("API HOME")
@@ -21,9 +22,7 @@ def setup_webhook(request):
         return HttpResponse("NOT FOUND", status=400)
     
 def parse_message(request):
-    for key in request:
-        print key
-
+    print request.raw_post_data
 
 
         # {
@@ -53,4 +52,4 @@ def parse_message(request):
         # }
 
 
-    return HttpResponse(body)
+    return HttpResponse("body")
