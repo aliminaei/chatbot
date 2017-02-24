@@ -4,3 +4,5 @@ PyMySQL==0.7.9
 requests==2.9.1
 whitenoise==3.2.1
 gunicorn==19.6.0
+simplejson==3.10.0
+wit==4.2.0
