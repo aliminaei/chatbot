@@ -7,9 +7,9 @@ def home(request):
 
 def fb_messages(request):
     if request.method == 'GET':
-        setup_webhook(request)
+        return setup_webhook(request)
     elif request.method == 'POST':
-        parse_message(request)
+        return parse_message(request)
 
 def setup_webhook(request):
     mode = request.GET.get('hub.mode', '')
