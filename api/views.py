@@ -19,6 +19,8 @@ def setup_webhook(request):
         return HttpResponse(challenge)
     else:
         return HttpResponse(status=400)
+
+    return HttpResponse("DONE!!!")
     
 def parse_message(request):
     return HttpResponse("DONE!!!")
