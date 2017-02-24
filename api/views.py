@@ -34,5 +34,17 @@ def parse_message(request):
         sender_id = ""
 
     print sender_id
+    send_message_to_user(sender_id, "HELLO FROM ALIG")
 
     return HttpResponse(data)
+
+def send_message_to_user(sender_id, message):
+    json_data = {
+        "recipient": {"id": sender_id},
+        "message": {"text": message}
+    }
+    params = {
+        "access_token": settings.FB_MESSENGER_ACCESS_TOKEN
+    }
+    r = requests.post('https://graph.facebook.com/v2.6/me/messages', json=json_data, params=params)
+    print(r, r.status_code, r.text)
